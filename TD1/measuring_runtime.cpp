@@ -15,9 +15,10 @@ void measure(int nb_elements){
     auto init_start_time_point = std::chrono::high_resolution_clock::now();
 
     int even_integers[nb_elements];
+    even_integers[0] = 2;
 
-    for (int i = 0; i < nb_elements; ++i) {
-        even_integers[i] = 2*i;
+    for (int i = 1; i < nb_elements; ++i) {
+        even_integers[i] = even_integers[i-1] + 2;
     }
 
     auto init_end_time_point = std::chrono::high_resolution_clock::now();
