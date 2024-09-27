@@ -1,8 +1,8 @@
 #include <chrono>
 #include <iostream>
 
-int sum_array(int array[], int size) {
-    int sum = 0;
+long sum_array(int array[], int size) {
+    long sum = 0;
     for (int i = 0; i < size; ++i) {
         sum += array[i];
     }
@@ -27,7 +27,7 @@ void measure(int nb_elements){
 
     init_start_time_point = std::chrono::high_resolution_clock::now();
 
-    int sum = sum_array(even_integers, nb_elements);
+    long sum = sum_array(even_integers, nb_elements);
 
     init_end_time_point = std::chrono::high_resolution_clock::now();
 
